@@ -20,13 +20,37 @@ Both **Jupyter notebooks** and **HTML exports** are provided to ensure full repr
 ## Project Structure
 
 ```
-├── Regression_Data_Cleaning.ipynb
-├── Regression_Data_Cleaning.html
-├── Regression_Model_Comparisson.ipynb
-├── Regression_Model_Comparisson.html
-├── Regression_Modelling_Optimized.ipynb
-├── Regression_Modelling_Optimized.html
-├── football-prediction.ipynb
+├── notebooks/                      # Jupyter notebooks
+│   ├── Regression_Data_Cleaning.ipynb
+│   ├── Regression_Model_Comparisson.ipynb
+│   ├── Regression_Modelling_Base.ipynb
+│   ├── Regression_Modelling_Optimized.ipynb
+│   └── from-kaggle/                # Reference notebooks from Kaggle
+│
+├── reports/                        # HTML exports of notebooks
+│   ├── Regression_Data_Cleaning.html
+│   ├── Regression_Model_Comparisson.html
+│   ├── Regression_Modelling_Base.html
+│   └── Regression_Modelling_Optimized.html
+│
+├── data/                          # Raw and processed datasets
+│   ├── raw/                       # Original datasets
+│   │   ├── transfermarkt_fbref_201718.csv
+│   │   ├── transfermarkt_fbref_201819.csv
+│   │   └── transfermarkt_fbref_201920.csv
+│   └── clean/                     # Cleaned/processed datasets
+│       └── football_cleaned.csv
+│
+├── figures/                       # Visualizations and plots
+│   ├── actual_vs_predicted_*.png
+│   └── ... (model evaluation plots)
+│
+├── results/                       # Model outputs and optimization results
+│   ├── optimization_results*.txt
+│   ├── best_params*.txt
+│   ├── columns_overview.txt
+│   └── missing_values_summary.txt
+│
 └── README.md
 ```
 
@@ -69,22 +93,22 @@ Includes:
 
 ---
 
-### 4) football-prediction.ipynb
-**Goal:** Project-level notebook integrating the regression workflow and results.
-
 ---
 
 ## How to Use
 
 ### Option A: View results only
-Open the `.html` files in your browser to inspect:
-- data cleaning decisions  
-- model comparison outputs  
-- evaluation tables and plots  
+Open the HTML files in the `reports/` folder in your browser to inspect:
+- data cleaning decisions
+- model comparison outputs
+- evaluation tables and plots
+
+All visualizations are available in the `figures/` folder and model results in the `results/` folder.
 
 ### Option B: Run notebooks locally
 1. Open the repository in Jupyter Notebook / JupyterLab
-2. Run the notebooks in this order:
+2. Navigate to the `notebooks/` folder
+3. Run the notebooks in this order:
    1. `Regression_Data_Cleaning.ipynb`
    2. `Regression_Model_Comparisson.ipynb`
    3. `Regression_Modelling_Optimized.ipynb`
