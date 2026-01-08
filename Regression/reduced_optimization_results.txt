@@ -1,9 +1,0 @@
-Best Parameters:
-{
-    "regressor__learning_rate": 0.04514929384238499,
-    "regressor__max_depth": 5,
-    "regressor__min_samples_leaf": 5,
-    "regressor__min_samples_split": 2,
-    "regressor__n_estimators": 296
-}
-Best Score (Negative MSE): -0.27503632775315634
